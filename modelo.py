@@ -18,7 +18,7 @@ class Modelo:
         self.y = le.fit_transform(self.y)
 
     def separar_treino_teste(self, test_size=0.3):
-        self.X_treino, self.X_teste, self.y_treino, self.y_teste = train_test_split(self.X, self.y, test_size=0.7, random_state=42)
+        self.X_treino, self.X_teste, self.y_treino, self.y_teste = train_test_split(self.X, self.y, test_size=0.3, random_state=42)
 
     def iniciar_modelo(self):
         self.codificar()

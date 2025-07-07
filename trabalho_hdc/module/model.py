@@ -44,10 +44,10 @@ class EncodersModel():
             # self.X_categorical_encoder = self.categorical_encoder(samples.clone())
 
             # RecordEncoder
-            self.X_record_encoder = self.record_encoder(samples.clone())
+            self.X_record_encoder = self.record_encoder(samples.detach().clone())
 
             # NGramEncoder
-            self.X_ngram_encoder = self.ngram_encoder(samples.clone(), oper=oper)
+            self.X_ngram_encoder = self.ngram_encoder(samples.detach().clone(), oper=oper)
 
     def split_train_test(self):
         # self.X_train_categorical, self.X_test_categorical, self.y_train_categorical, self.y_test_categorical = train_test_split(self.X_categorical_encoder_fit, self.labels, test_size=0.3, random_state = 0) 

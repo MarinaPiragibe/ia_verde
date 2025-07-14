@@ -1,8 +1,8 @@
 # Altere para o caminho que se encontra o dataset na sua máquina
 DATASET_PATH = r'/home/marinapiragibe/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3'
 
-NUM_SAMPLES_TRAIN_DEBUGGER = 1000
-NUM_SAMPLES_TEST_DEBUGGER = 400
+NUM_SAMPLES_TRAIN_DEBUGGER = 100
+NUM_SAMPLES_TEST_DEBUGGER = 50
 
 CLASS_NAMES = ['FAKE', 'REAL']
 IMG_HIGHT = 32

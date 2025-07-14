@@ -8,8 +8,8 @@ class Cifake(Dataset):
     name = "cifake"
     def __init__(self):
         # Carrega features e labels
-        self.features = np.load('features.npy')
-        self.labels = np.load('labels.npy')
+        self.features = np.load('features.npy', mmap_mode='r')
+        self.labels = np.load('labels.npy', mmap_mode='r')
 
         self.samples = []
         self.categorical_features = []
@@ -17,7 +17,7 @@ class Cifake(Dataset):
         self.features = pd.DataFrame(self.features, columns=[f'feat_{i}' for i in range(self.features.shape[1])])
 
         self.samples = [
-            {**{f'feat_{i}': self.features[idx, i] for i in range(self.features.shape[1])},
+            {**{f'feat_{i}': self.features.iloc[idx, i] for i in range(self.features.shape[1])},
             'class': int(self.labels[idx])}
             for idx in range(len(self.labels))
         ]

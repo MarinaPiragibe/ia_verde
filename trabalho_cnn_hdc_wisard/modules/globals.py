@@ -2,7 +2,7 @@
 DATASET_PATH = r'/home/marinapiragibe/.cache/kagglehub/datasets/birdy654/cifake-real-and-ai-generated-synthetic-images/versions/3'
 
 NUM_SAMPLES_TRAIN_DEBUGGER = 5000
-NUM_SAMPLES_TEST_DEBUGGER = 1000
+NUM_SAMPLES_TEST_DEBUGGER = 2000
 
 CLASS_NAMES = ['FAKE', 'REAL']
 IMG_HIGHT = 32
